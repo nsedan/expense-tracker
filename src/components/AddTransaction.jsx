@@ -33,6 +33,7 @@ const AddTransaction = () => {
               setText(e.target.value);
             }}
             placeholder="Enter text..."
+            required
           />
         </div>
         <div className="form-control">
@@ -47,6 +48,7 @@ const AddTransaction = () => {
               setAmount(e.target.value);
             }}
             placeholder="Enter amount..."
+            required
           />
         </div>
         <button className="btn">Add transaction</button>
