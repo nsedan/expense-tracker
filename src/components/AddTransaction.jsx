@@ -4,7 +4,7 @@ import { GlobalContext } from "../context/GlobalState";
 
 const AddTransaction = () => {
   const [text, setText] = useState("");
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState("");
 
   const { addTransaction } = useContext(GlobalContext);
 
@@ -17,7 +17,7 @@ const AddTransaction = () => {
     };
     addTransaction(newTransaction);
     setText("");
-    setAmount(0);
+    setAmount("");
   };
 
   return (
@@ -38,7 +38,7 @@ const AddTransaction = () => {
         <div className="form-control">
           <label htmlFor="amount">
             Amount <br />
-            (negative - expense, positive - income)
+            <small>(negative - expense, positive - income)</small>
           </label>
           <input
             type="number"
